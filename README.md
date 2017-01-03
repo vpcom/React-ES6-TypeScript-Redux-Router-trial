@@ -10,23 +10,21 @@
 
 Installing webpack and making the first hello world:
 
-- Create src folder
-- Create build/web folder
-- Run:
-
+Create src folder
+Create build/web folder
+Run:
 
     npm i webpack -D
 
-- Create webpack.config.js
-- Create src folder
-- Create build folder
-- Create index.html with this in the body:
-
+Create webpack.config.js
+Create src folder
+Create build folder
+Create index.html with this in the body:
 
     <div id="root" />
     <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
     
-- Create src/index.js:
+Create src/index.js:
 
 
     var React = require("react");
@@ -47,14 +45,12 @@ Installing webpack and making the first hello world:
 
 ### Adding es6 transcription:
 
-- Run:
-
+Run:
 
     npm i -D babel-loader babel-core
     npm i -D babel-preset-env
 
-- Add the following to the config variable in webpack.config.js
-
+Add the following to the config variable in webpack.config.js
 
     module: {
         loaders: [
@@ -62,15 +58,13 @@ Installing webpack and making the first hello world:
         ]
     }
 
-- Create the file .babelrc with the content:
-
+Create the file .babelrc with the content:
 
     {
       "presets" : ["env"]
     }
 
-- Update src/index.js with the following es6 code:
-
+Update src/index.js with the following es6 code:
 
     var React = require("react");
     var ReactDOM = require("react-dom");
