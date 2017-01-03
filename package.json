@@ -1,0 +1,30 @@
+{
+  "name": "reactemp",
+  "version": "1.0.0",
+  "description": "NPM install components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpcom/reactemp.git"
+  },
+  "keywords": [
+    "React",
+    "starter"
+  ],
+  "author": "Vincent Perrin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vpcom/reactemp/issues"
+  },
+  "homepage": "https://github.com/vpcom/reactemp#readme",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
+}
