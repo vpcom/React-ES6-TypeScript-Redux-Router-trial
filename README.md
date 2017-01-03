@@ -5,9 +5,7 @@
 ### Initial components:
 
     npm init # generates the initial package.json
-    
     npm i react -S # creates the node_modules folder
-    
     npm i react-dom -S
 
 Installing webpack and making the first hello world:
