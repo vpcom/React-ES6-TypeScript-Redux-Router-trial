@@ -14,15 +14,3 @@ ReactDOM.render(
     React.createElement(App),
     mainContainer
 );
-
-
-
-//import React from 'react';
-//import {render} from 'react-dom';
-
-/*
-class App extends React.Component {
-    ReactDom.render () {
-        return <p> Yo man!</p>;
-    }
-}*/
