@@ -26,7 +26,6 @@ Create index.html with this in the body:
     
 Create src/index.js:
 
-
     var React = require("react");
     var ReactDOM = require("react-dom");
     
@@ -81,3 +80,6 @@ Update src/index.js with the following es6 code:
         React.createElement(App),
         mainContainer
     );
+
+npm install --save-dev typescript awesome-typescript-loader source-map-loader
+npm i -D ts-loader

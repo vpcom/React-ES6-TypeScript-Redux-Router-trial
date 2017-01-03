@@ -4,10 +4,11 @@ var path = require('path');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-    entry: APP_DIR + '\\index.js',
+    entry: APP_DIR + '\\index.tsx',
     module: {
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+            // ts-loader runs before babel-loader
+            { test: /\.ts(x?)$/, loader: 'babel-loader!ts-loader' }
         ]
     }
 };
