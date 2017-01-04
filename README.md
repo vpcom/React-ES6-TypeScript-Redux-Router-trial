@@ -2,7 +2,7 @@
 
 ## Step by step setup
 
-### Initial components:
+### Initial components
 
     npm init # generates the initial package.json
     npm i react -S # creates the node_modules folder
@@ -42,7 +42,7 @@ Create src/index.js:
         mainContainer
     );
 
-### Adding es6 transcription:
+### Adding ES2015 transcription
 
 Run:
 
@@ -81,5 +81,53 @@ Update src/index.js with the following es6 code:
         mainContainer
     );
 
-npm install --save-dev typescript awesome-typescript-loader source-map-loader
-npm i -D ts-loader
+### Adding ES2015 transcription
+
+Add the following modules:
+
+    npm i -D babel-preset-es2015 babel-preset-react babel-preset-stage-0
+    npm i -D typescript awesome-typescript-loader source-map-loader
+    npm i -D ts-loader
+
+Create the new file tsconfig.json with the following content:
+
+    {
+      "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "moduleResolution": "node",
+        "baseUrl": "src",
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "build/web/",
+        "jsx": "preserve"
+      },
+      "exclude": [
+        "node_modules"
+      ]
+    }
+
+Change the config of the loader in webpack.config.json to:
+
+    { test: /\.ts(x?)$/, loader: 'babel-loader!ts-loader' }
+
+Change the preset in .babelrc to:
+
+    "presets": ["es2015", "react", "stage-0"]
+
+Eventually, change file extension of index.js to .tsx as well as the entry point in the Webpack config. Update the index.tsx file with the following TypeScript code:
+
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    
+    class App extends React.Component {
+        render() {
+            return <h1>React, TypeScript style</h1>;
+        }
+    }
+    
+    ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+    );
