@@ -1,5 +1,17 @@
 # reactemp
 
+
+## Run
+
+
+    npm install
+    webpack-dev-server --progress --colors
+
+Go to `http://localhost:8080/` or `http://localhost:8080/webpack-dev-server/` for the webpack info
+
+TODO: build script in package.json
+
+
 ## Step by step setup
 
 ### Initial components
@@ -131,3 +143,10 @@ Eventually, change file extension of index.js to .tsx as well as the entry point
         <App />,
         document.getElementById('root')
     );
+
+
+## installing react-router:
+
+    npm i -S react-router
+    
+

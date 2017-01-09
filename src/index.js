@@ -37,14 +37,7 @@ ReactDOM.render(
 /* TypeScript style */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Router from './router';
 
-class App extends React.Component {
-    render() {
-        return <h1>React, TypeScript style</h1>;
-    }
-}
-
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
+// Now we can attach the router to the 'root' element like this:
+ReactDOM.render(Router, document.getElementById('root'));
