@@ -7,7 +7,8 @@ import Header from './components/Header/'
 import SideBar from './components/SideBar/'
 import Home from './components/Home/'
 import Users from './components/Users/'
-
+import Counter from './components/Counter/'
+import Visit from './components/Visit/'
 
 
 export default (
@@ -15,23 +16,35 @@ export default (
 
 
     <Route path="/" component={App}>
-        <IndexRoute component={Home}/>
+        <IndexRoute components={{header: Header, sidebar: SideBar, home: Home}} />
+    </Route>
+
+    <Route path="users" component={Users} >
         <IndexRoute components={{header: Header, sidebar: SideBar}} />
     </Route>
 
+    <Route path="counter" >
+        <IndexRoute component={Counter} />
+    </Route>
 
-    <Route path="users" component={Users} >
-
-        <IndexRoute components={{header: Header, sidebar: SideBar}} />
-        </Route>
+    <Route path="visit" >
+        <IndexRoute component={Visit} />
+    </Route>
 
 </Router>
 );
 
 
+/*
+ <IndexRoute components={{header: Header, sidebar: SideBar, home: Home, counter: Counter}} />
+
 
 
 /*
+
+
+ <IndexRoute component={Home}/>
+
 OK:
  export default (
  <Router history={browserHistory}>

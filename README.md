@@ -5,7 +5,7 @@
 
 
     npm install
-    webpack-dev-server --progress --colors
+    webpack-dev-server --progress --colors or npm start
 
 Go to `http://localhost:8080/` or `http://localhost:8080/webpack-dev-server/` for the webpack info
 
@@ -27,6 +27,7 @@ Create build/web folder
 Run:
 
     npm i webpack -D
+    npm i -D webpack-dev-server and/or npm i -g webpack-dev-server if not using npm start script
 
 Create webpack.config.js
 Create src folder
@@ -148,5 +149,13 @@ Eventually, change file extension of index.js to .tsx as well as the entry point
 ## installing react-router:
 
     npm i -S react-router
+    npm i -S react-router-redux
     
+    npm i -S redux
 
+npm i -S path // For cross platform paths
+
+
+easy state change on mounting, check this: http://jaketrent.com/post/set-state-in-callbacks-in-react/
+
+and also the todd moto about create.class VS extends component

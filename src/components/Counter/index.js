@@ -1,7 +1,8 @@
+/*
 import * as React from 'react';
 
 
-export class Counter extends React.Component {
+export default class Counter extends React.Component {
 
 /*
     constructor(props: any){
@@ -25,7 +26,7 @@ export class Counter extends React.Component {
             super(props);
             //this.test = this.props.test;
         }
-    */
+    *
     render() {
         return (
             <div>
@@ -37,10 +38,12 @@ export class Counter extends React.Component {
     }
 }
 
-/*
+*/
 import React, { Component, PropTypes } from 'react'
 
 class Counter extends Component {
+
+    value2;
     static propTypes = {
         value: PropTypes.number.isRequired,
         onIncrement: PropTypes.func.isRequired,
@@ -84,7 +87,32 @@ class Counter extends Component {
 }
 
 export default Counter
-*/
+
+/*
+
+
+ var mapStateToProps = function(state){
+ // This component will have access to `state.battlefield` through `this.props.battle`
+ return {battle:state.battlefield};
+ };
+
+ var mapDispatchToProps = function(dispatch){
+ return {
+ kill: function(killer,victim){ dispatch(actions.aimAt(killer,victim)); },
+ duck: function(coward){ dispatch(actions.duckDown(coward)); },
+ reset: function(){ dispatch(actions.reset()); }
+ }
+ };
+
+ module.exports = ReactRedux.connect(mapStateToProps,mapDispatchToProps)(Home);
+
+ */
+
+
+
+
+
+
 
 /*
 import React, { Component, PropTypes } from 'react'

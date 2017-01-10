@@ -2,9 +2,11 @@ var webpack = require('webpack');
 var path = require('path');
 
 var APP_DIR = path.resolve(__dirname, 'src');
+var entry_point = 'index.js';
+var entry_path = path.join(APP_DIR, entry_point); // Cross platform path
 
 var config = {
-    entry: APP_DIR + '\\index.js',
+    entry: entry_path,
     module: {
         loaders: [
             /* ts-loader runs before babel-loader
@@ -15,6 +17,9 @@ var config = {
                 exclude: /node_modules/
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
     }
 };
 
