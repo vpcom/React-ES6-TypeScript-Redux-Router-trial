@@ -1,27 +1,52 @@
 
 
-import React from 'react';
-
+import React, {PropTypes} from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 //import Counter from '../Counter/'
 
-export default class App extends React.Component {
+class App extends React.Component {
+
+
+    constructor(props) {
+        super(props);
+        console.log("props App");
+        console.log(props);
+        console.log("this App");
+        console.log(this);
+    }
+
+
     render() {
-        const { header, sidebar, home } = this.props
+        console.log("App component")
+        console.log(this)
+        console.log("------------------")
+        const { header, sidebar, home, users, counter, visit } = this.props
         return (
             <div>
                 {sidebar}
                 {header}
                 {home}
-                This is the home base content!
+                This is the App content
+                {users}
+                {counter}
+                {visit}
 
+                {this.props.children}
             </div>
 
         )
     }
 }
+
+/*
+App.propTypes = {
+    children: PropTypes.object.isRequired
+};
+*/
+
+export default App;
 
 /*
 

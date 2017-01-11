@@ -8,32 +8,21 @@ class Visit extends Component {
 
     constructor(props) {
         super(props);
-        console.log("props");
+        console.log("props Visit");
         console.log(props);
-        //console.log(this.getState());
+        console.log("this Visit");
+        console.log(this);
 
-        this.state = {
-
-        };
-    }
-
-
-/*
-    static propTypes = {
-        visitCount: PropTypes.number //.isRequired
-    }
-*/
-/*
-    myFunction() {
+        this.onIncrement = this.onIncrement.bind(this);
 
     }
-*/
+
     componentDidMount () {
         //SomeEvent.subscribe(this.myFunction);
         console.log("componentDidMount")
         console.log(this);
         console.log(this.props.visitCount);
-        //this.props.visitCount++;
+
         this.setState((prevState, props) => {
             return {visitCount: 4};//prevState.myInteger + 1};// props.step};
         });
@@ -41,22 +30,34 @@ class Visit extends Component {
         console.log(this.props.visitCount);
     }
 
+
+    onIncrement() {
+        console.log("this rfom onIncrement:")
+        console.log(this)
+
+        dispatch({ type: 'VISITOR' })
+    }
+
     render() {
-        const { visitCount } = this.props;
+        const { dispatch, visitCount } = this.props;
         console.log("this:")
         console.log(this)
         console.log(this.props.visitCount)
-        this.visitCount = 2;
         return (
             <p>
-                Visit count: {visitCount}, {this.visitCount}.
+                Visit count: {visitCount}.
+                <br />
+                <button onClick={this.onIncrement}>
+                    + old
+                </button>
+
+                <button onClick={ () => {
+                    dispatch(this.onIncrement())
+                }}>llllllll</button>
             </p>
         )
     }
 }
-
-//export default Visit
-
 
 
 Visit.propTypes = {
@@ -69,6 +70,7 @@ Visit.defaultProps = {
 };
 
 function mapStateToProps (state) {
+    console.log("state mapStateToProps: ");
     console.log(state);
     console.log(state.visitReducer[0].visitCount);
     return {
@@ -77,30 +79,6 @@ function mapStateToProps (state) {
 }
 
 const mapDispatchToProps = {
-    //onSearch: actions.search
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Visit)
-
-
-
-/*
-
-
- var mapStateToProps = function(state){
- // This component will have access to `state.battlefield` through `this.props.battle`
- return {battle:state.battlefield};
- };
-
- var mapDispatchToProps = function(dispatch){
- return {
- kill: function(killer,victim){ dispatch(actions.aimAt(killer,victim)); },
- duck: function(coward){ dispatch(actions.duckDown(coward)); },
- reset: function(){ dispatch(actions.reset()); }
- }
- };
-
- module.exports = ReactRedux.connect(mapStateToProps,mapDispatchToProps)(Home);
-
- */
-

@@ -43,7 +43,6 @@ import React, { Component, PropTypes } from 'react'
 
 class Counter extends Component {
 
-    value2;
     static propTypes = {
         value: PropTypes.number.isRequired,
         onIncrement: PropTypes.func.isRequired,

@@ -159,3 +159,6 @@ npm i -S path // For cross platform paths
 easy state change on mounting, check this: http://jaketrent.com/post/set-state-in-callbacks-in-react/
 
 and also the todd moto about create.class VS extends component
+
+
+2017.01.11: Do I need a middlw ware with thunk to have the store and dispatch through the hierarchy of children components.

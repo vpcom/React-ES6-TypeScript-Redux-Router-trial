@@ -1,5 +1,8 @@
 import React from 'react';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { Provider } from 'react-redux';
+
+import store from './store'
 
 // Layouts
 import App from './components/App/'
@@ -12,111 +15,16 @@ import Visit from './components/Visit/'
 
 
 export default (
-<Router history={browserHistory}>
+<Provider store={store}>
+    <Router history={browserHistory}>
 
+        <Route path="/" component={App}>
+            <IndexRoute components={{header: Header, sidebar: SideBar, home: Home}} />
+            <Route path="/users" components={{header: Header, sidebar: SideBar, users: Users}} />
+            <Route path="/counter" components={{header: Header, sidebar: SideBar, counter: Counter}} />
+            <Route path="/visit" components={{header: Header, sidebar: SideBar, visit: Visit}} />
+        </Route>
 
-    <Route path="/" component={App}>
-        <IndexRoute components={{header: Header, sidebar: SideBar, home: Home}} />
-    </Route>
-
-    <Route path="users" component={Users} >
-        <IndexRoute components={{header: Header, sidebar: SideBar}} />
-    </Route>
-
-    <Route path="counter" >
-        <IndexRoute component={Counter} />
-    </Route>
-
-    <Route path="visit" >
-        <IndexRoute component={Visit} />
-    </Route>
-
-</Router>
+    </Router>
+</Provider>
 );
-
-
-/*
- <IndexRoute components={{header: Header, sidebar: SideBar, home: Home, counter: Counter}} />
-
-
-
-/*
-
-
- <IndexRoute component={Home}/>
-
-OK:
- export default (
- <Router history={browserHistory}>
- <Route component={App}>
-
- <Route path="/" components={{header: Header, sidebar: SideBar}} >
-
- <Route path="users" component={Users} />
-
- </Route>
-
- <Route path="users" component={Users} />
- </Route>
- <Route path="users" component={Users} />
- </Router>
- );
-
-
-OK with ...
- {this.props.children} in App/index.js
-
- <Route path="/" component={App}>
- <IndexRoute component={Home}/>
- <IndexRoute components={{header: Header, sidebar: SideBar}} />
- <Route path="users" component={Users}>
- <IndexRoute component={Users}/>
- </Route>
- </Route>
-
-
-
---
-
- <Route path="users" component={Users} />
-
- <Route path="users">
- <IndexRoute component={Users} />
- </Route>
-
-
- <Route path="users">
- <Route component={SearchLayout}>
- <IndexRoute component={UserList} />
- </Route>
- <Route path=":userId" component={UserProfile} />
- </Route>
-
---
-
- <Route path="/" component={Header} />
- <Route path="/" component={SideBar} />
-
-
- <Route path="test" components={{header: Header, sidebar: SideBar}} />
-
- <IndexRoute components={{Header: Header, Sidebar: Sidebar}}/>
-
-
- <main>
- {this.props.children}
- </main>
-
- <Route path="users">
- <IndexRoute component={Users} />
- </Route>
-
-
- <Route path="users">
- <Route component={SearchLayout}>
- <IndexRoute component={UserList} />
- </Route>
- <Route path=":userId" component={UserProfile} />
- </Route>
-
- */
