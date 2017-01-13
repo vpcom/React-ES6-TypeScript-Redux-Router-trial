@@ -2,6 +2,32 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux';
 
+// new implementation
+import { createStore } from 'redux'
+import incrementVisit from './reducers'
+let store = createStore(incrementVisit)
+
+import { increment } from './actions'
+
+// Log the initial state
+console.log(store.getState())
+
+// Every time the state changes, log it
+// Note that subscribe() returns a function for unregistering the listener
+let unsubscribe = store.subscribe(() =>
+    console.log(store.getState())
+)
+
+// Dispatch some actions
+store.dispatch(incrementVisit())
+store.dispatch(incrementVisit(1))
+store.dispatch(incrementVisit(2))
+
+// Stop listening to state updates
+unsubscribe()
+
+
+/*
 
 class Visit extends Component {
 
@@ -35,7 +61,9 @@ class Visit extends Component {
         console.log("this rfom onIncrement:")
         console.log(this)
 
-        dispatch({ type: 'VISITOR' })
+        const quantity = 2
+
+        dispatch(increment(quantity))
     }
 
     render() {
@@ -82,3 +110,5 @@ const mapDispatchToProps = {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Visit)
+*/
+

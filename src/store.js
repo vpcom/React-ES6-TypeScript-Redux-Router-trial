@@ -6,6 +6,6 @@ const initialState = {
     visitReducer: [{visitCount: 4}]
 };
 
-const store = createStore(reducers, initialState);
+const store = createStore(reducers, initialState); //reducers.visitReducer);//initialState);
 
 export default store;

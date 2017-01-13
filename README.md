@@ -161,4 +161,14 @@ easy state change on mounting, check this: http://jaketrent.com/post/set-state-i
 and also the todd moto about create.class VS extends component
 
 
-2017.01.11: Do I need a middlw ware with thunk to have the store and dispatch through the hierarchy of children components.
+2017.01.11: Do I need a middleware with thunk to have the store and dispatch through the hierarchy of children components.
+
+Good reads: 
+https://github.com/gaearon/redux-thunk
+http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559
+Maybe this one, but there may not be the source: https://egghead.io/courses/getting-started-with-redux
+(async) https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3#.c0dhchmuq
+https://learnredux.com/
+For async calls: http://blog.nojaf.com/2015/12/06/redux-thunk/
+
+

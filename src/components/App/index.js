@@ -1,7 +1,7 @@
 
 
 import React, {PropTypes} from 'react';
-import { createStore } from 'redux';
+//import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 //import Counter from '../Counter/'
