@@ -11,15 +11,13 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log("props App");
-        console.log(props);
-        console.log("this App");
+        console.log("App constructor");
         console.log(this);
     }
 
 
     render() {
-        console.log("App component")
+        console.log("Rendering App")
         console.log(this)
         console.log("------------------")
         const { header, sidebar, home, users, counter, visit } = this.props

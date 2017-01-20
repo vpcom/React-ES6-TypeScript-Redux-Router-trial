@@ -4,7 +4,7 @@ import { combineReducers } from 'redux'
 
 
 
-function increment(state = 0, action) {
+function increment(state = [], action) {
     switch (action.type) {
         case INCREMENT:
             return state + 1

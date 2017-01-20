@@ -196,3 +196,5 @@ Now here: http://redux.js.org/docs/basics/Reducers.html#handling-actions
 ... go to http://redux.js.org/docs/basics/ExampleTodoList.html and rework the visit/index.js file to link things well
 See this: https://github.com/reactjs/redux/tree/master/examples/todos/src
 
+To review: propTypes 
+

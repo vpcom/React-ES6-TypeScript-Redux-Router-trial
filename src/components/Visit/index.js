@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 
 // new implementation
 import { createStore } from 'redux'
+import { increment } from './actions'
 import incrementVisit from './reducers'
+
 
 /*
 let store = createStore(incrementVisit)
@@ -65,7 +67,8 @@ class Visit extends Component {
 
         const quantity = 2
 
-        // Undefined!!! dispatch(increment(quantity))
+        // Undefined!!!
+        dispatch(increment(quantity))
     }
 
     render() {
@@ -106,20 +109,34 @@ Visit.defaultProps = {
 };
 
 function mapStateToProps (state) {
-    console.log("state mapStateToProps: ");
+    console.log("mapStateToProps, state: ");
     console.log(state);
 
-    //console.log(state.visitReducer[0].visitCount);
     return {
-        //visitCount: state.visitReducer[0].visitCount
-        null
+        //todos: getVisibleTodos(state.todos, state.visibilityFilter)
+        visitCount: state.visitReducer.increment
+        //null
     };
 
 }
 
-const mapDispatchToProps = {
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onIncrement: () => {
+            dispatch(increment(1))
+        }
+    }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Visit)
+
+const VisitContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Visit)
+
+export default VisitContainer
+
+//export default connect(mapStateToProps, mapDispatchToProps)(Visit)
 
 

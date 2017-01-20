@@ -42,9 +42,13 @@ import { Provider } from 'react-redux';
 import Store from './store';
 
 // Now we can attach the router to the 'root' element like this:
-//ReactDOM.render(Router, document.getElementById('root'));
+ReactDOM.render(Router, document.getElementById('root'));
 
+/*
 ReactDOM.render(
-    <Provider store={Store}>{Router}</Provider>,
+    <Provider store={Store}>
+        {Router}
+    </Provider>,
     document.getElementById('root')
 );
+    */

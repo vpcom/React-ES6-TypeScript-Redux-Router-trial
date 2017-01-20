@@ -6,7 +6,7 @@ const initialState = {
     visitReducer: [{visitCount: 4}]
 };
 */
-console.log(reducers);
+//console.log(reducers);
 //console.log(initialState);
 
 const store = createStore(reducers);//, initialState);
