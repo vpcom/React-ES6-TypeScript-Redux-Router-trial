@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 // new implementation
 import { createStore } from 'redux'
 import incrementVisit from './reducers'
+
+/*
 let store = createStore(incrementVisit)
 
 import { increment } from './actions'
@@ -26,8 +28,8 @@ store.dispatch(incrementVisit(2))
 // Stop listening to state updates
 unsubscribe()
 
+*/
 
-/*
 
 class Visit extends Component {
 
@@ -110,5 +112,5 @@ const mapDispatchToProps = {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Visit)
-*/
+
 

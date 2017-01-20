@@ -156,19 +156,39 @@ Eventually, change file extension of index.js to .tsx as well as the entry point
 npm i -S path // For cross platform paths
 
 
-easy state change on mounting, check this: http://jaketrent.com/post/set-state-in-callbacks-in-react/
-
-and also the todd moto about create.class VS extends component
 
 
-2017.01.11: Do I need a middleware with thunk to have the store and dispatch through the hierarchy of children components.
+# React references
 
-Good reads: 
-https://github.com/gaearon/redux-thunk
-http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559
-Maybe this one, but there may not be the source: https://egghead.io/courses/getting-started-with-redux
-(async) https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3#.c0dhchmuq
-https://learnredux.com/
-For async calls: http://blog.nojaf.com/2015/12/06/redux-thunk/
+### General
+- http://stackoverflow.com/documentation/reactjs/6371/react-createclass-vs-extends-react-component#t=201611112010580710903
+- easy state change on mounting: http://jaketrent.com/post/set-state-in-callbacks-in-react/
+- https://demo.reactstarterkit.com/contact
+- and also the todd moto about create.class VS extends component
 
+### Redux
+- https://github.com/reactjs/redux/
+- Maybe this one, but there may not be the source: https://egghead.io/courses/getting-started-with-redux
+- https://learnredux.com/
+- https://github.com/krawaller/riastart2015
+- Official redux examples: https://github.com/reactjs/redux
+- https://github.com/reactjs/react-router-redux
+- http://jamesknelson.com/simple-routing-redux-react/
+- http://jlongster.com/A-Simple-Way-to-Route-with-Redux
+- https://github.com/jpsierens/webpack-react-redux
+- http://jpsierens.com/simple-react-redux-application/
+- https://github.com/reactjs/redux/blob/master/docs/introduction/Examples.md
+- https://github.com/bradwestfall/CSS-Tricks-React-Series/
+
+### Redux Thunk async calls for notifications
+- https://github.com/gaearon/redux-thunk
+- https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3#.c0dhchmuq
+- http://blog.nojaf.com/2015/12/06/redux-thunk/
+- http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559
+
+# Temp notes
+
+Now here: http://redux.js.org/docs/basics/Reducers.html#handling-actions
+... go to http://redux.js.org/docs/basics/ExampleTodoList.html and rework the visit/index.js file to link things well
+See this: https://github.com/reactjs/redux/tree/master/examples/todos/src
 

@@ -9,6 +9,8 @@ export const INCREMENT = 'INCREMENT'
  */
 
 export function increment(quantity) {
+    console.log("quantity: ");
+    console.log(quantity);
     return {
         type: INCREMENT,
         quantity
