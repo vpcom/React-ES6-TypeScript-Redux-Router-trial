@@ -65,7 +65,7 @@ class Visit extends Component {
 
         const quantity = 2
 
-        dispatch(increment(quantity))
+        // Undefined!!! dispatch(increment(quantity))
     }
 
     render() {
@@ -82,12 +82,18 @@ class Visit extends Component {
                 </button>
 
                 <button onClick={ () => {
-                    dispatch(this.onIncrement())
-                }}>llllllll</button>
+                }}>another onclich</button>
             </p>
         )
     }
 }
+/* dispatch is not a function
+
+ <button onClick={ () => {
+ dispatch(this.onIncrement())
+ }}>another onclich</button>
+
+ */
 
 
 Visit.propTypes = {
@@ -102,10 +108,13 @@ Visit.defaultProps = {
 function mapStateToProps (state) {
     console.log("state mapStateToProps: ");
     console.log(state);
-    console.log(state.visitReducer[0].visitCount);
+
+    //console.log(state.visitReducer[0].visitCount);
     return {
-        visitCount: state.visitReducer[0].visitCount
+        //visitCount: state.visitReducer[0].visitCount
+        null
     };
+
 }
 
 const mapDispatchToProps = {

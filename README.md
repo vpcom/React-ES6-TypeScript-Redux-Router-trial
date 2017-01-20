@@ -11,6 +11,10 @@ Go to `http://localhost:8080/` or `http://localhost:8080/webpack-dev-server/` fo
 
 TODO: build script in package.json
 
+It may also be necessary to stop Node to be able to restart it. On Windows, use:
+
+    taskkill /F /IM node.exe 
+
 
 ## Step by step setup
 
@@ -158,7 +162,7 @@ npm i -S path // For cross platform paths
 
 
 
-# React references
+## React references
 
 ### General
 - http://stackoverflow.com/documentation/reactjs/6371/react-createclass-vs-extends-react-component#t=201611112010580710903
@@ -186,7 +190,7 @@ npm i -S path // For cross platform paths
 - http://blog.nojaf.com/2015/12/06/redux-thunk/
 - http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559
 
-# Temp notes
+## Temp notes
 
 Now here: http://redux.js.org/docs/basics/Reducers.html#handling-actions
 ... go to http://redux.js.org/docs/basics/ExampleTodoList.html and rework the visit/index.js file to link things well
