@@ -1,4 +1,10 @@
-# reactemp
+# React ES6 TypeScript Redux Router trial
+
+## tldr
+
+This is a project aimed at learning React. The aim was to allow ECMAScript6 or TypeScript thanks to Babel, and the to setup Redux and a Router.
+
+To be continued...
 
 
 ## Run
